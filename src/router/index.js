@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import Category from "@/views/product/category";
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,6 +19,11 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
+  },
+  {
+    path: '/category',
+    name: 'Category',
+    component: Category
   }
 ]
 
